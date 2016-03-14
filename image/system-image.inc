@@ -11,9 +11,20 @@ DISTRO_SSH_DAEMON = "dropbear"
 #  DM814x-Z3      #
 ###################
 IMAGE_INSTALL_append_dm814x-z3 = "\
-   task-hanover-dm814x-z3         \
+   task-dm814x-z3         \
    "
 EXTRA_IMAGEDEPENDS_append_dm814x-z3 = "\
    linux-omap3-z3                      \
    u-boot-omap3-z3                     \
   "
+
+  
+IMAGE_INSTALL_append_dm814x-evm = "\
+   task-dm814x-evm         \
+   "
+EXTRA_IMAGEDEPENDS_append_dm814x-evm = "\
+   linux-omap3-evm                      \
+   u-boot-omap3-evm                     \
+  "
+
+ 

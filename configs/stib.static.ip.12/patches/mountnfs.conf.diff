@@ -1,0 +1,11 @@
+Index: etc/mountnfs.conf
+===================================================================
+--- /dev/null
++++ etc/mountnfs.conf
+@@ -0,0 +1,6 @@
++# NFS mounts 
++###################################################################
++#  HOST              REMOTE PATH                      MOUNT POINT #
++###################################################################
++192.168.9.2   /usr/local/update/obc-iv/ipk/ip_tft  /media/update
++192.168.9.2   /usr/local/data                      /usr/share/data

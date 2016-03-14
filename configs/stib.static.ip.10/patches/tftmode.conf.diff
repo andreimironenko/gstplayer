@@ -1,0 +1,7 @@
+Index: etc/tftmode.conf
+===================================================================
+--- etc.orig/tftmode.conf
++++ etc/tftmode.conf
+@@ -1 +1 @@
+-0
++1

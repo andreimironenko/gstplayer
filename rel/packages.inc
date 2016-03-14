@@ -1,13 +1,12 @@
 ################################################################################
-# Project SR1106 package list
+# IPTFT product specification 
 #
-# Author: Andrei Mironenko <amironenko@hanoverdisplays.com>
+# Author: Andrei Mironenko <andrei.mironenko@paralleldynamic.com>
 #
-# Copyright(C) 2012 Hanover Displays Ltd.
 ################################################################################
 
 # Trying to get rid of busybox               
-TASK_HANOVER_BASE =      "\
+TASK_BASE =      "\
     mtd-utils             \
     curl                  \
     arago-feed-configs    \
@@ -25,7 +24,7 @@ TASK_HANOVER_BASE =      "\
     module-init-tools     \
   "
   
-TASK_HANOVER_ALSA_UTILS = "\
+TASK_ALSA_UTILS = "\
     alsa-conf \
     alsa-conf-base \
     alsa-server \
@@ -33,7 +32,7 @@ TASK_HANOVER_ALSA_UTILS = "\
     alsa-state \
     "
 
-TASK_HANOVER_UTILS =     "\
+TASK_UTILS =     "\
    gdbserver              \
    i2c-tools              \
    fbset                  \
@@ -46,19 +45,24 @@ TASK_HANOVER_UTILS =     "\
    rsync                  \
    wget                   \
    bash                   \
+   diffutils              \
+   diffstat               \
+   patch                  \
+   bzip2                  \
+   quilt                  \
 "
 
-TASK_HANOVER_EDITORS =   "\
+TASK_EDITORS =   "\
    vim                    \
    nano                   \
     "
 
-TASK_HANOVER_JPEG_VIEWER = "\
+TASK_JPEG_VIEWER = "\
   fbida                   \
   tiff                    \
   "
   
-TASK_HANOVER_FSUTILS =   "\
+TASK_FSUTILS =   "\
     e2fsprogs             \
     e2fsprogs-e2fsck      \
     e2fsprogs-mke2fs      \
@@ -66,7 +70,7 @@ TASK_HANOVER_FSUTILS =   "\
     mtd-utils             \
   "
   
-TASK_HANOVER_GST =       "\
+TASK_GST =       "\
    gstreamer              \
    gst-plugins-base       \
    gst-plugins-good       \
@@ -79,41 +83,43 @@ TASK_HANOVER_GST =       "\
    gst-rtsp               \
 " 
 
-TASK_HANOVER_NCURSES =   "\
+TASK_NCURSES =   "\
     ncurses-terminfo      \
     ncurses-tools         \
     "
 
-TASK_HANOVER_APPS =      "\
-  sdltest                 \
-  iptft                   \
-  firmloader              \
+TASK_AVAHI = "\
+    avahi-autoipd     \
+    avahi-daemon      \
+    avahi-utils       \
+    zeroconf          \
+"
+
+TASK_APPS =      "\
   "      
   
-export TASK_HANOVER_PRODUCT =       "\
-      ${TASK_HANOVER_BASE}          \
-      ${TASK_HANOVER_UTILS}         \
-      ${TASK_HANOVER_ALSA_UTILS}    \ 
-      ${TASK_HANOVER_EDITORS}       \
-      ${TASK_HANOVER_JPEG_VIEWER}   \
-      ${TASK_HANOVER_FSUTILS}       \
-      ${TASK_HANOVER_GST}           \
-      ${TASK_HANOVER_NCURSES}       \
-      ${TASK_HANOVER_APPS}          \
+export TASK_PRODUCT =       "\
+      ${TASK_BASE}          \
+      ${TASK_UTILS}         \
+      ${TASK_ALSA_UTILS}    \ 
+      ${TASK_EDITORS}       \
+      ${TASK_JPEG_VIEWER}   \
+      ${TASK_FSUTILS}       \
+      ${TASK_GST}           \
+      ${TASK_NCURSES}       \
+      ${TASK_AVAHI}         \
+      ${TASK_APPS}          \
     "    
 ###############################################################################
-# Hanover common packages preferred versions                                  #
+# Common packages preferred versions                                  #
 ###############################################################################
-PREFERRED_VERSION_hanover-configs = "1.1.1"
-PREFERRED_VERSION_hanover-security = "1.0.2"
+PREFERRED_VERSION_system-configs = "1.1.1"
+PREFERRED_VERSION_system-security = "1.0.2"
 PREFERRED_VERSION_build-scripts = "1.0.4"        
         
 ###############################################################################
 # Application package preferred versions                                      #
 ###############################################################################
-PREFERRED_VERSION_sdltest = "1.0.8"
-PREFERRED_VERSION_iptft = "1.0.10"
-PREFERRED_VERSION_firmloader = "1.0.8"
 
 ###############################################################################
 # Machine specifi preferred versions                                          #

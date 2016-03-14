@@ -1,7 +1,7 @@
 ################################################################################
-# SR1106 library list
+# IPTFT product  
 #
-# Author: Andrei Mironenko <amironenko@hanoverdisplays.com>
+# Author: Andrei Mironenko <andrei.mironenko@paralleldynamic.com>
 ################################################################################
 
 # Development build is based on release one with some packages which are taken 
@@ -11,13 +11,10 @@ require ../rel/libs.inc
 ################################################################################
 # Additional packages for the development build 
 ################################################################################
-TASK_HANOVER_APPS_LIBS += "\
- unittest-cpp${pf} \
+TASK_APPS_LIBS += "\
  "
-PREFERRED_VERSION_unittest-cpp${pf} = "1.4"
  
 ################################################################################
 # Git cutting edge version of libraries                                        #
 ################################################################################
-PREFERRED_VERSION_jsoncpp${pf} = "git"
 

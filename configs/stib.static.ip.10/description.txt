@@ -1,0 +1,19 @@
+STIB configuration: static IP 192.168.9.10, NFS shares from HTC(192.168.9.2)
+
+Configuration settings:
+
+*****************
+* IP addresses: *
+*****************
+auto eth0
+iface eth0 inet static
+address 192.168.9.10
+netmask 255.255.255.0
+network 192.168.9.0
+gateway 192.168.9.2
+
+*****************
+* NFS shares:   *
+*****************
+/usr/local/update      *(rw,no_root_squash,insecure,no_subtree_check)
+/usr/local/data        *(rw,no_root_squash,insecure,no_subtree_check)
