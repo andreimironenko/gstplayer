@@ -111,11 +111,12 @@ export TASK_PRODUCT =       "\
       ${TASK_APPS}          \
     "    
 ###############################################################################
-# Common packages preferred versions                                  #
+# Common packages preferred versions                                          #
 ###############################################################################
-PREFERRED_VERSION_system-configs = "1.1.1"
+PREFERRED_VERSION_system-configs = "1.1.4"
+PREFERRED_VERSION_system-update = "1.1.2"
 PREFERRED_VERSION_system-security = "1.0.2"
-PREFERRED_VERSION_build-scripts = "1.0.4"        
+PREFERRED_VERSION_build-scripts = "1.0.6"        
         
 ###############################################################################
 # Application package preferred versions                                      #
